@@ -1,0 +1,19 @@
+.heading {
+    color: #d11d1dcb;
+}
+
+body {
+    background-color: #320845c4;
+}
+
+button {
+    background-color: rgb(21, 224, 255);
+    font-variant: small-caps;
+}
+
+div {
+    font-size: xxx-large;
+    font-family: Arial;
+    text-align: center;
+    padding: 50px;
+}
