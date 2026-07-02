@@ -371,14 +371,28 @@
 // console.dir(button);
 
 //Selecting By Class
-// let headings = document.getElementsByClassName("heading-class");
-// console.dir(headings);
-// console.log(headings);
+let headings = document.getElementsByClassName("heading-class");
+console.dir(headings);
+console.log(headings);
 
 // Selecting By Tags
-// let para = document.getElementsByTagName("p");
-// console.dir(para);
+let para = document.getElementsByTagName("p");
+console.dir(para);
 
 //Selecting By Query
-// let element = document.querySelectorAll(".heading-class");
-// console.dir(element);
+let element = document.querySelectorAll(".heading-class");
+console.dir(element);
+
+//Properties - check,change & update the value 
+//tagName
+let para = document.querySelector("p");
+console.dir(para.tagName);
+
+//innerText
+console.dir(document.body.firstChild);
+let div = document.querySelector("div").children;
+console.log(div);
+
+//firstChild Node
+let p01 = document.getElementById("para-01");
+console.log(p01.firstChild.nodeName);
