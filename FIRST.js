@@ -403,4 +403,4 @@ console.dir(div);
 
 //innerHTML
 let div = document.querySelector("div");
-console.log(div.innerHTML);
+console.div(div.innerHTML);
