@@ -398,8 +398,8 @@
 // console.log(p01.firstChild.nodeName);
 
 //innerText
-//let div = document.querySelector("div");
-//console.dir(div);
+let div = document.querySelector("div");
+console.dir(div);
 
 //innerHTML
 let div = document.querySelector("div");
