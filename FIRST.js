@@ -383,7 +383,7 @@
 // let element = document.querySelectorAll(".heading-class");
 // console.dir(element);
 
-//Properties - check,change & update the value 
+//Properties - check,change & update the value
 //tagName
 // let para = document.querySelector("p");
 // console.dir(para.tagName);
@@ -398,9 +398,31 @@
 // console.log(p01.firstChild.nodeName);
 
 //innerText
-let div = document.querySelector("div");
-console.dir(div);
+//let div = document.querySelector("div");
+//console.dir(div);
 
 //innerHTML
-let div = document.querySelector("div");
-console.div(div.innerHTML);
+//let div = document.querySelector("div");
+//console.div(div.innerHTML);
+
+let heading = document.querySelector("h1");
+console.log(heading.innerText);
+
+// //innerText
+let heading = document.querySelector("h1");
+console.log(heading); //<h1 style="visibility:hidden"> Old Heading </h1>
+console.log(heading.innerText); //''
+console.log(heading.textContent);// Old Heading
+
+//Question 1
+let heading = document.querySelector("h2")
+heading.innerText = heading.innerText + " from apna college student";
+console.dir(heading.innerText);
+
+//Question 2
+let divs = document.querySelectorAll(".box");
+let i = 1;
+for (div of divs) {
+    div.innerText = `new unique value ${i}`;
+    i++;
+}
