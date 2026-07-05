@@ -405,24 +405,43 @@
 //let div = document.querySelector("div");
 //console.div(div.innerHTML);
 
-let heading = document.querySelector("h1");
-console.log(heading.innerText);
+// let heading = document.querySelector("h1");
+// console.log(heading.innerText);
 
 // //innerText
-let heading = document.querySelector("h1");
-console.log(heading); //<h1 style="visibility:hidden"> Old Heading </h1>
-console.log(heading.innerText); //''
-console.log(heading.textContent);// Old Heading
+// let heading = document.querySelector("h1");
+// console.log(heading); //<h1 style="visibility:hidden"> Old Heading </h1>
+// console.log(heading.innerText); //''
+// console.log(heading.textContent);// Old Heading
 
 //Question 1
-let heading = document.querySelector("h2")
-heading.innerText = heading.innerText + " from apna college student";
-console.dir(heading.innerText);
+// let heading = document.querySelector("h2")
+// heading.innerText = heading.innerText + " from apna college student";
+// console.dir(heading.innerText);
 
 //Question 2
-let divs = document.querySelectorAll(".box");
-let i = 1;
-for (div of divs) {
-    div.innerText = `new unique value ${i}`;
-    i++;
-}
+// let divs = document.querySelectorAll(".box");
+// let i = 1;
+// for (div of divs) {
+//     div.innerText = `new unique value ${i}`;
+//     i++;
+// }
+
+
+//Attributes
+//getAttribute
+let div = document.querySelector("div");
+console.log(div);
+
+let id = div.getAttribute("id");
+console.log(id);
+
+let name = div.getAttribute("name");
+console.log(name);
+
+let p = document.querySelector("p")
+console.log(p.getAttribute("class"));
+
+//setAttribute
+let para = document.querySelector("p");
+console.log(para.setAttribute("class", "new class"));
