@@ -447,72 +447,72 @@
 // console.log(para.setAttribute("class", "new class"));
 
 //Style
-let div = document.querySelector("div");
-console.log(div);
-console.log(div.style);//inline style key object return
+// let div = document.querySelector("div");
+// console.log(div);
+// console.log(div.style);//inline style key object return
 
-let div = document.querySelector("div");
-div.style.backgroundColor = "green";
-div.style.fontSize = "20px";
-div.innerText = "Hello";
-div.style.visibility = "hidden"
+// let div = document.querySelector("div");
+// div.style.backgroundColor = "green";
+// div.style.fontSize = "20px";
+// div.innerText = "Hello";
+// div.style.visibility = "hidden"
 
 //Insert Element
 //Created Element
-let newbtn = document.createElement("button");
-newbtn.innerText = "push";
-console.dir(newbtn);
+// let newbtn = document.createElement("button");
+// newbtn.innerText = "push";
+// console.dir(newbtn);
 
 //Append Method
-let div = document.querySelector("div");
-div.append(newbtn);
+// let div = document.querySelector("div");
+// div.append(newbtn);
 
 //Prepend menthod
-let div = document.querySelector("div");
-div.prepend(newbtn);
+// let div = document.querySelector("div");
+// div.prepend(newbtn);
 
 //Before Methosd
-let div = document.querySelector("div");
-div.before(newbtn);
+// let div = document.querySelector("div");
+// div.before(newbtn);
 
 //After Method
-let div = document.querySelector("div");
-div.after(newbtn);
+// let div = document.querySelector("div");
+// div.after(newbtn);
 
 //Creates aheading by Insert Method
-let h1 = document.createElement("h1");
-h1.innerHTML = "<i>Hi ,I am new!</i>";
-document.querySelector("body").prepend(h1)
+// let h1 = document.createElement("h1");
+// h1.innerHTML = "<i>Hi ,I am new!</i>";
+// document.querySelector("body").prepend(h1)
 
 //Delete Method
-let para = document.querySelector("p");
-para.remove();
+// let para = document.querySelector("p");
+// para.remove();
 
-let h1 = document.createElement("h1");
-h1.innerHTML = "<i>Hi ,I am new!</i>";
-document.querySelector("body").prepend(h1)
-h1.remove();
+// let h1 = document.createElement("h1");
+// h1.innerHTML = "<i>Hi ,I am new!</i>";
+// document.querySelector("body").prepend(h1)
+// h1.remove();
 
 //AppendChild
-document.querySelector("div").appendChild(newbtn);
+// document.querySelector("div").appendChild(newbtn);
 
 //removechild
-document.querySelector("div").removeChild(newbtn);
+// document.querySelector("div").removeChild(newbtn);
 
 //Create a button
-let btn = document.createElement("button");
-btn.innerText = "Click me";
-btn.style.color = "white";
-btn.style.backgroundColor = "red";
-document.querySelector("body").prepend(btn);
+// let btn = document.createElement("button");
+// btn.innerText = "Click me";
+// btn.style.color = "white";
+// btn.style.backgroundColor = "red";
+// document.querySelector("body").prepend(btn);
 
 //create a paragraphy and try to put css style in new css class
-let para = document.querySelector("p");
-para.setAttribute("class", "newclass");
+// let para = document.querySelector("p");
+// para.setAttribute("class", "newclass");
 
 //Doing by Classlist so not to change class
 //adding newclass
-para.classList.add("newclass");
+// para.classList.add("newclass");
 
 //removing newclass
-para.classList.remove("newclass")
+// para.classList.remove("newclass");
