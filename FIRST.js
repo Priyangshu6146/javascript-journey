@@ -25,7 +25,7 @@
 //         console.log("Better luc but next time");
 //     }
 
-//------------------------------X------------------------------X------------------------------X------------------------------X
+//------------------------------X------------------------------X------------------------------X------------------------------X-------------------------------
 
 //                                                       String[]
 
@@ -60,7 +60,7 @@
 // let part11 = str.substring(0, 5)[0];//P
 // console.log(part11);
 
-//------------------------------X------------------------------X------------------------------X------------------------------X
+//------------------------------X------------------------------X------------------------------X------------------------------X-------------------------------
 
 //                                                Arrays[]    18 June 2026
 
@@ -158,7 +158,7 @@
 // companies.push("Amazon");
 // console.log(companies);
 
-//------------------------------X------------------------------X------------------------------X------------------------------X
+//------------------------------X------------------------------X------------------------------X------------------------------X---------------------
 
 //                                                Function()    24 June 2026
 
@@ -357,7 +357,7 @@
 // })
 // console.log("Total product of the array=", prod);
 
-//------------------------------X------------------------------X------------------------------X------------------------------X
+//------------------------------X------------------------------X------------------------------X------------------------------X------------------
 
 //                                                   DOMS    27 June 2026
 // console.log(window);
@@ -516,3 +516,80 @@
 
 //removing newclass
 // para.classList.remove("newclass");
+
+//------------------------------X------------------------------X------------------------------X------------------------------X---------------
+
+//                                                          Events
+
+// let btn = document.querySelector("#btn1");
+// btn1.onclick = () => {
+//     console.log("btn1 is clicked ");
+// }
+
+// let div = document.querySelector("div");
+// div.onmouseover = () => {
+//     console.log("div is access");
+// }
+
+let btn2 = document.querySelector("#btn2");
+btn2.ondblclick = () => {
+    console.log("btn2 is clicked");
+}
+
+
+//Event Object
+
+
+let btn1 = document.querySelector("#btn1");
+btn1.onclick = (evt) => {
+    console.log(evt);
+    console.log(evt.target);
+    console.log(evt.type);
+    console.log(evt.clientX, evt.clientY);
+}
+
+let div = document.querySelector("div");
+div.onmouseover = (evt) => {
+    console.log(evt);
+    console.log(evt.target);
+    console.log(evt.type);
+    console.log(evt.clientX, evt.clientY);
+}
+
+
+//Event Listener 
+
+//AddEventListener
+let btn1 = document.querySelector("#btn1");
+btn1.addEventListener("click", () => {
+    console.log("button1 was clicked ");
+})
+
+btn1.addEventListener("click", (evt) => {
+    console.log("button1 was clicked - handle2 ");
+    console.log(evt);
+    console.log(evt.type);
+});
+
+//RemoveEventListener
+
+let btn1 = document.querySelector("#btn1");
+btn1.addEventListener("click", () => {
+    console.log("button1 was clicked - handle2 ");
+})
+
+btn1.addEventListener("click", () => {
+    console.log("button1 was clicked - handle2 ");
+});
+
+let handler3 = () => {
+    console.log("button1 was clicked - handle3 ");
+}
+
+btn1.addEventListener("click", handler3);
+
+btn1.addEventListener("click", () => {
+    console.log("button1 was clicked - handle4 ");
+});
+
+btn1.removeEventListener("click", handler3);
