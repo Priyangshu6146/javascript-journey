@@ -27,3 +27,18 @@ div {
     border: 1px solid black;
     align-content: center;
 }
+
+.btn {
+    background-color: rgb(255, 200, 21);
+    font-variant: small-caps;
+}
+
+.dark {
+    background-color: black;
+    color: white;
+}
+
+.light {
+    background-color: white;
+    color: black;
+}

@@ -531,65 +531,269 @@
 //     console.log("div is access");
 // }
 
-let btn2 = document.querySelector("#btn2");
-btn2.ondblclick = () => {
-    console.log("btn2 is clicked");
-}
+// let btn2 = document.querySelector("#btn2");
+// btn2.ondblclick = () => {
+//     console.log("btn2 is clicked");
+// }
 
 
 //Event Object
 
 
-let btn1 = document.querySelector("#btn1");
-btn1.onclick = (evt) => {
-    console.log(evt);
-    console.log(evt.target);
-    console.log(evt.type);
-    console.log(evt.clientX, evt.clientY);
-}
+// let btn1 = document.querySelector("#btn1");
+// btn1.onclick = (evt) => {
+//     console.log(evt);
+//     console.log(evt.target);
+//     console.log(evt.type);
+//     console.log(evt.clientX, evt.clientY);
+// }
 
-let div = document.querySelector("div");
-div.onmouseover = (evt) => {
-    console.log(evt);
-    console.log(evt.target);
-    console.log(evt.type);
-    console.log(evt.clientX, evt.clientY);
-}
+// let div = document.querySelector("div");
+// div.onmouseover = (evt) => {
+//     console.log(evt);
+//     console.log(evt.target);
+//     console.log(evt.type);
+//     console.log(evt.clientX, evt.clientY);
+// }
 
 
-//Event Listener 
+//Event Listener
 
 //AddEventListener
-let btn1 = document.querySelector("#btn1");
-btn1.addEventListener("click", () => {
-    console.log("button1 was clicked ");
-})
+// let btn1 = document.querySelector("#btn1");
+// btn1.addEventListener("click", () => {
+//     console.log("button1 was clicked ");
+// })
 
-btn1.addEventListener("click", (evt) => {
-    console.log("button1 was clicked - handle2 ");
-    console.log(evt);
-    console.log(evt.type);
-});
+// btn1.addEventListener("click", (evt) => {
+//     console.log("button1 was clicked - handle2 ");
+//     console.log(evt);
+//     console.log(evt.type);
+// });
 
 //RemoveEventListener
 
-let btn1 = document.querySelector("#btn1");
-btn1.addEventListener("click", () => {
-    console.log("button1 was clicked - handle2 ");
-})
+// let btn1 = document.querySelector("#btn1");
+// btn1.addEventListener("click", () => {
+//     console.log("button1 was clicked - handle2 ");
+// })
 
-btn1.addEventListener("click", () => {
-    console.log("button1 was clicked - handle2 ");
-});
+// btn1.addEventListener("click", () => {
+//     console.log("button1 was clicked - handle2 ");
+// });
 
-let handler3 = () => {
-    console.log("button1 was clicked - handle3 ");
+// let handler3 = () => {
+//     console.log("button1 was clicked - handle3 ");
+// }
+
+// btn1.addEventListener("click", handler3);
+
+// btn1.addEventListener("click", () => {
+//     console.log("button1 was clicked - handle4 ");
+// });
+
+// btn1.removeEventListener("click", handler3);
+
+// let btn = document.querySelector("button");
+// let body = document.querySelector("body")
+// let mode = "light";
+
+// btn.addEventListener("click", () => {
+//     if (mode === "light") {
+//         mode = "dark";
+//         body.classList.add("dark");
+//         body.classList.remove("light")
+//     } else if (mode === "dark") {
+//         mode = "light";
+//         body.classList.add("light");
+//         body.classList.add("dark");
+//     } else {
+//         return invalid;
+//     }
+//     console.log(mode);
+// })
+
+
+////------------------------------X------------------------------X------------------------------X------------------------------X---------------
+//                                                        Classes & Object
+
+// const student = {
+//     fullName: "Priyangshu",
+//     marks: 7.68,
+//     printMarks: function () {
+//         console.log("marks =", this.marks);
+//     }
+// }
+
+// const employee = {
+//     calctax() {
+//         console.log("Tax rate is 10%");
+//     },
+//)
+// const karanArjun = {
+//     salary: 45000,
+// }
+// const karanArjun2 = {
+//     salary: 50000,
+// }
+// karanArjun.__proto__ = employee;
+// karanArjun.__proto__ = employee;
+
+// const karanArjun = {
+//     salary: 50000,
+//     calctax() {
+//         console.log("Tax rate is 20%");
+//     }
+// }
+// karanArjun.__proto__ = employee;
+
+//Constructor()
+
+// class ToyotaCar {
+//     constructor(brand) {
+//         console.log("creating new object");
+//         this.brand = brand;
+//     }
+//     start() {
+//         console.log("Start");
+//     }
+
+//     stop() {
+//         console.log("stop");
+//     }
+//     setBrand(brand) {
+//         this.brandName = brand;
+//     }
+// }
+// let fortuner = new ToyotaCar("fortuner");
+// let lexus = new ToyotaCar();
+
+
+// Inheritance
+
+// class Parent {
+//     hello() {
+//         console.log("Hello");
+//     }
+// }
+
+// class child extends Parent { }
+// let obj = new child();
+// console.log(obj);
+// console.log(obj.hello());
+
+// class Human {
+//     eat() {
+//         console.log("eat");
+//     }
+
+//     sleep() {
+//         console.log("sleep");
+//     }
+//     work() {
+//         console.log("Do something");
+//     }
+
+
+// }
+
+// class Engineer extends Human {
+//     work() {
+//         console.log("Build");
+//     }
+// }
+
+// class Doctor extends Human {
+//     work() {
+//         console.log("Treat");
+//     }
+// }
+
+// let obj = new Engineer();
+// console.log(obj);
+// console.log(obj.work());
+
+
+//super()
+
+// class Person {
+//     constructor(name) {
+//         this.species = "homo sapiens";
+//         this.name = name;
+//     }
+//     eat() {
+//         console.log("eat");
+//     }
+// }
+
+// class Engineer extends Person {
+//     constructor(name) {
+//         super(name);
+//     }
+//     work() {
+//         super.eat();
+//         console.log("solve problem");
+//     }
+// }
+
+// let engg = new Engineer("Priyangshu");
+// console.log(engg);
+
+
+//Question
+// class user {
+//     constructor(name, email) {
+//         this.name = name;
+//         this.email = email;
+//     }
+//     viewData() {
+//         console.log("Data")
+//     }
+
+// }
+
+// let Student1 = new user("Priyangshu", "priyangshu132@gmail.com");
+// let Student2 = new user("Kanto", "kanto159@gmail.com");
+
+// let teacher = new user("dean", "TAT@gmail.com");
+
+// class user {
+//     constructor(name, email) {
+//         this.name = name;
+//         this.email = email;
+//     }
+//     viewData() {
+//         console.log("Data")
+//     }
+
+// }
+
+
+// class admin extends user {
+//     constructor(name, email) {
+//         super(name, email);
+//     }
+//     editData() {
+//         console.log("New Data")
+//     }
+// }
+
+// let admine = new admin("Aman", "Aman123@gmail.com");
+
+
+// erroe handling 
+
+let a = 5;
+let b = 4;
+console.log("a=", a);
+console.log("b=", b);
+console.log("a+b=", a + b);
+try {
+    console.log("a+b=", a + c);
+} catch (err) {
+    console.log(err);
 }
+console.log("a+b=", a + b);
 
-btn1.addEventListener("click", handler3);
-
-btn1.addEventListener("click", () => {
-    console.log("button1 was clicked - handle4 ");
-});
-
-btn1.removeEventListener("click", handler3);
+console.log("a+b=", a + b);
+console.log("a+b=", a + b);
