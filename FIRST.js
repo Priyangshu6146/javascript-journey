@@ -806,249 +806,268 @@
 
 // Asynchronous()
 
-function hello() {
-    console.log("hello");
-}
-setTimeout(hello, 2000);
+// function hello() {
+//     console.log("hello");
+// }
+// setTimeout(hello, 2000);
 
-setTimeout(() => {
-    console.log("hello");
-}, 4000)
+// setTimeout(() => {
+//     console.log("hello");
+// }, 4000)
 
-console.log("one");
-console.log("two");
+// console.log("one");
+// console.log("two");
 
-setTimeout(() => {
-    console.log("hello");
-}, 4000);
+// setTimeout(() => {
+//     console.log("hello");
+// }, 4000);
 
-console.log("three");
-console.log("four");
+// console.log("three");
+// console.log("four");
 
 
 //Callback
 
-function sum(a, b) {
-    console.log(a + b);
-}
-function calculator(a, b, sumCallback) {
-    sumCallback(a, b);
-}
-calculator(1, 2, sum);
+// function sum(a, b) {
+//     console.log(a + b);
+// }
+// function calculator(a, b, sumCallback) {
+//     sumCallback(a, b);
+// }
+// calculator(1, 2, sum);
 
-let hello = () => {
-    console.log("hello");
-}
-setTimeout(hello, 4000);
+// let hello = () => {
+//     console.log("hello");
+// }
+// setTimeout(hello, 4000);
 
 //Callback Hell
 
-function getData(dataId, getNextData) {
-    setTimeout(() => {
-        console.log("Data", dataId);
-        if (getNextData) {
-            getNextData();
-        }
-    }, 2000)
-}
+// function getData(dataId, getNextData) {
+//     setTimeout(() => {
+//         console.log("Data", dataId);
+//         if (getNextData) {
+//             getNextData();
+//         }
+//     }, 2000)
+// }
 
-getData(1, () => {
-    console.log("getting the 2...");
-    getData(2, () => {
-        console.log("getting the 3...");
-        getData(3, () => {
-            console.log("getting the 4...");
-            getData(4);
-        });
-    });
-});
+// getData(1, () => {
+//     console.log("getting the 2...");
+//     getData(2, () => {
+//         console.log("getting the 3...");
+//         getData(3, () => {
+//             console.log("getting the 4...");
+//             getData(4);
+//         });
+//     });
+// });
 
 // Promices()
 
-let promise = new Promise((resolve, reject) => {
-    console.log("I am a promices");
-    resolve(123)
-})
+// let promise = new Promise((resolve, reject) => {
+//     console.log("I am a promices");
+//     resolve(123)
+// })
 
 
 
-let promise = new Promise((resolve, reject) => {
-    console.log("I am a promices");
-    reject("i am an error")
-})
+// let promise = new Promise((resolve, reject) => {
+//     console.log("I am a promices");
+//     reject("i am an error")
+// })
 
 
-function getData(dataId, getNextData) {
-    return new Promise((resolve, rejecy) => {
-        setTimeout(() => {
-            console.log("Data", dataId);
-            if (getNextData) {
-                getNextData();
-            }
-        }, 2000)
-    })
-}
+// function getData(dataId, getNextData) {
+//     return new Promise((resolve, rejecy) => {
+//         setTimeout(() => {
+//             console.log("Data", dataId);
+//             if (getNextData) {
+//                 getNextData();
+//             }
+//         }, 2000)
+//     })
+// }
 
-let obj = getData(123);
+// let obj = getData(123);
 
-const getPromise = () => {
-    return new Promise((resolve, reject) => {
-        console.log("I am a Promise");
-        reject("error network");
-    })
-}
+// const getPromise = () => {
+//     return new Promise((resolve, reject) => {
+//         console.log("I am a Promise");
+//         reject("error network");
+//     })
+// }
 
 
 // then();
-let promise = getPromise();
-promise.then((res) => {
-    console.log("Promise Fullfilled", res);
-})
+// let promise = getPromise();
+// promise.then((res) => {
+//     console.log("Promise Fullfilled", res);
+// })
 
 
 //catch();
-promise.catch((err) => {
-    console.log("Promise Rejected", err);
-})
+// promise.catch((err) => {
+//     console.log("Promise Rejected", err);
+// })
 
 
 //Promise Chain
-function asyncfunction1() {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            console.log("Some Data1");
-            resolve("Success");
-        }, 4000)
-    })
-}
+// function asyncfunction1() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("Some Data1");
+//             resolve("Success");
+//         }, 4000)
+//     })
+// }
 
 
 
-function asyncfunction2() {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            console.log("Some Data2");
-            resolve("Success");
-        }, 4000)
-    })
-}
+// function asyncfunction2() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("Some Data2");
+//             resolve("Success");
+//         }, 4000)
+//     })
+// }
 
-console.log("Fetching Data1")
-let p1 = asyncfunction1();
-p1.then((res) => {
-    console.log("Fetching Data2")
-    let p2 = asyncfunction2();
-    p2.then((res) => { })
-})
-
-
-console.log("Fetching Data1...")
-asyncfunction1().then((res) => {
-    console.log("Fetching Data2...");
-    asyncfunction2().then((res) => { })
-})
+// console.log("Fetching Data1")
+// let p1 = asyncfunction1();
+// p1.then((res) => {
+//     console.log("Fetching Data2")
+//     let p2 = asyncfunction2();
+//     p2.then((res) => { })
+// })
 
 
-function getData(dataId) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            console.log("Data", dataId);
-            resolve("Success");
-        }, 2000)
-    })
-}
+// console.log("Fetching Data1...")
+// asyncfunction1().then((res) => {
+//     console.log("Fetching Data2...");
+//     asyncfunction2().then((res) => { })
+// })
+
+
+// function getData(dataId) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("Data", dataId);
+//             resolve("Success");
+//         }, 2000)
+//     })
+// }
 
 
 
 //Promise chain()
 
-getData(1).then((res) => {
-    console.log(res);
-    getData(2).then((res) => {
-        console.log(res);
-        getData(3).then((res) => {
-            console.log(res);
-        })
-    })
-})
+// getData(1).then((res) => {
+//     console.log(res);
+//     getData(2).then((res) => {
+//         console.log(res);
+//         getData(3).then((res) => {
+//             console.log(res);
+//         })
+//     })
+// })
 
 
 //Simple way
-console.log("fetching Data1....");
-getData(1).then((res) => {
-    console.log("fetching Data2....");
-    return getData(2);
+// console.log("fetching Data1....");
+// getData(1).then((res) => {
+//     console.log("fetching Data2....");
+//     return getData(2);
 
-}).then((res) => {
-    console.log("fetching Data3....");
-    return getData(3);
+// }).then((res) => {
+//     console.log("fetching Data3....");
+//     return getData(3);
 
-}).then((res) => {
-    console.log(res)
-})
+// }).then((res) => {
+//     console.log(res)
+// })
 
 
 // Async-Await()
 
 
-function Api() {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            console.log("Weather Data")
-            resolve(200);
-        }, 2000)
-    })
-}
+// function Api() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("Weather Data")
+//             resolve(200);
+//         }, 2000)
+//     })
+// }
 
-async function getData() {
-    await Api();
-    await Api();
-}
+// async function getData() {
+//     await Api();
+//     await Api();
+// }
 
-function getdata(dataID) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            console.log("Data", dataID);
-            resolve("Success");
-        }, 2000)
-    })
-}
+// function getdata(dataID) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("Data", dataID);
+//             resolve("Success");
+//         }, 2000)
+//     })
+// }
 
-async function getAlldata() {
-    console.log("Fetching Data1....");
-    await getdata(1);
-    console.log("Fetching Data2....");
-    await getdata(2);
-    console.log("Fetching Data3....");
-    await getdata(3);
-    console.log("Fetching Data4....");
-    await getdata(4);
-    console.log("Fetching Data5....");
-    await getdata(5);
-}
+// async function getAlldata() {
+//     console.log("Fetching Data1....");
+//     await getdata(1);
+//     console.log("Fetching Data2....");
+//     await getdata(2);
+//     console.log("Fetching Data3....");
+//     await getdata(3);
+//     console.log("Fetching Data4....");
+//     await getdata(4);
+//     console.log("Fetching Data5....");
+//     await getdata(5);
+// }
 
 
 //IIFE()
 
 
-function getdata(dataID) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            console.log("Data", dataID);
-            resolve("Success");
-        }, 2000)
-    })
-}
+// function getdata(dataID) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("Data", dataID);
+//             resolve("Success");
+//         }, 2000)
+//     })
+// }
 
-(async function () {
-    console.log("Fetching Data1....");
-    await getdata(1);
-    console.log("Fetching Data2....");
-    await getdata(2);
-    console.log("Fetching Data3....");
-    await getdata(3);
-    console.log("Fetching Data4....");
-    await getdata(4);
-    console.log("Fetching Data5....");
-    await getdata(5);
-})();
+// (async function () {
+//     console.log("Fetching Data1....");
+//     await getdata(1);
+//     console.log("Fetching Data2....");
+//     await getdata(2);
+//     console.log("Fetching Data3....");
+//     await getdata(3);
+//     console.log("Fetching Data4....");
+//     await getdata(4);
+//     console.log("Fetching Data5....");
+//     await getdata(5);
+// })();
+
+
+//------------------------------X------------------------------X------------------------------X------------------------------X---------------
+//                                     Fetch Api()
+
+
+
+const Url = "https://randomfox.ca/floof/";
+
+
+const img = document.querySelector("#img");
+
+const getdata = async () => {
+    console.log("Getting Data....")
+    let responce = await fetch(Url);
+    console.log(responce);
+    let data = await responce.json();
+    img.innerText = data.image;
+}
